@@ -99,7 +99,9 @@ cmake -DCMAKE_BUILD_TYPE=DEBUG -DCMAKE_CXX_FLAGS="-std=c++11" ../foo
 ```
 
 IDE import cmake-project(~/build), Linux GCC
+
 C++ General/Paths/includes/ add /usr/local/include/opencv4
+
 Debug
 
 
