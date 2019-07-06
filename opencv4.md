@@ -51,6 +51,7 @@ make -j$(nproc)
 sudo make install
 ```
 
+```sh
 sudo ln -s /usr/local/lib/python2.7/site-packages/cv2  /usr/lib/python2.7/site-packages/
 sudo ln -s /usr/local/lib64/pkgconfig/opencv4.pc /usr/share/pkgconfig/
 sudo ldconfig
@@ -58,11 +59,13 @@ sudo ldconfig
 pkg-config --modversion opencv4
 pkg-config --cflags opencv4
 pkg-config --libs opencv
+```
 
 ipython
+```py
 import cv2
 print(cv2.__version__)
-
+```
 
 
 mkdir foo 
