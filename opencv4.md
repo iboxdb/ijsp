@@ -11,6 +11,14 @@ sudo yum install libjpeg-turbo-devel libtiff-devel  libdc1394-devel tbb-devel ei
 sudo yum install freeglut-devel mesa-libGL mesa-libGL-devel  boost boost-thread boost-devel libv4l-devel
 ```
 
+```
+sudo yum install epel-release -y
+sudo rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
+sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+sudo yum install ffmpeg ffmpeg-devel -y
+ffmpeg
+```
+
 Download opencv, opencv_contrib, opencv_extra
 
 cd ~/opencv_build/opencv && mkdir build && cd build
