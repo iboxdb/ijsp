@@ -1,5 +1,5 @@
 
-CentOS 7
+OpenCV4 on CentOS 7
 
 ```sh
 sudo yum install epel-release git gcc gcc-c++ cmake3 qt5-qtbase-devel python python-devel python-pip cmake
