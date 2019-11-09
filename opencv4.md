@@ -50,6 +50,22 @@ cmake3 -DCMAKE_BUILD_TYPE=RELEASE \
 ```
 
 ```sh
+cmake3 -DCMAKE_BUILD_TYPE=DEBUG \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    -DINSTALL_C_EXAMPLES=ON \
+    -DINSTALL_PYTHON_EXAMPLES=OFF \
+    -DOPENCV_GENERATE_PKGCONFIG=ON \
+    -DOPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
+    -DOPENCV_TEST_DATA_PATH=~/opencv_build/opencv_extra/testdata \
+    -DBUILD_EXAMPLES=OFF \
+    -DBUILD_DOCS=ON  \
+    -DWITH_IPP=OFF \
+    -DBUILD_JAVA=OFF \
+    -DBUILD_opencv_python2=OFF \
+    -DBUILD_opencv_python_bindings_generator=OFF \
+```
+
+```sh
 cmake -DBUILD_DOCS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 ```
 
@@ -86,6 +102,20 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable( DisplayImage helloworld.cxx )
 target_link_libraries( DisplayImage ${OpenCV_LIBS} )
 ```
+
+
+mkdir foo 
+CMakeLists.txt
+```
+cmake_minimum_required(VERSION 2.8)
+PROJECT( helloworld_proj )
+
+FIND_PACKAGE( OpenCV REQUIRED )
+ADD_EXECUTABLE( helloworld helloworld.cxx )
+TARGET_LINK_LIBRARIES( helloworld ${OpenCV_LIBS} )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+```
+
 
 helloworld.cxx
 ```cpp
